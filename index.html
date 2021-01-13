@@ -17,188 +17,40 @@
 </head>
 
 <body>
-    <!-- navbar -->
-    <div class="navbar">
-        <div class="container flex">
-            <h1>Homework</h1>
-            <nav>
-                <ul>
-                    <li><a href="lorukiWebsite.html">Home</a></li>
-                    <li><a href="features.html">Pseudo Code</a></li>
-                    <li><a href="docs.html">Other Info</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <!-- showcase -->
-    <section class="showcase">
-        <div class="container grid">
-            <div class="showcase-text">
-                <h1>JavaScript | Simple Calculator</h1>
-                <p>Use calculator as you normally would!</p>
-                <a href="https://codepen.io/lgbrock/pen/NWRMRdw" class="btn btn-outline">Check Code</a>
-            </div>
+    <h1>Homework | jsSimpleCalculator</h1>
+    <table>
+        <tr>
+            <td colspan="3"> <input type="text" id="result"></td>
+            <td> <input type="button" value="C" onclick="clr()"></td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="7" onclick="display('7')"> </td>
+            <td> <input type="button" value="8" onclick="display('8')"> </td>
+            <td> <input type="button" value="9" onclick="display('9')"> </td>
+            <td> <input type="button" value="+" onclick="display('+')"></td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="4" onclick="display('4')"> </td>
+            <td> <input type="button" value="5" onclick="display('5')"> </td>
+            <td> <input type="button" value="6" onclick="display('6')"> </td>
+            <td> <input type="button" value="-" onclick="display('-')"> </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="1" onclick="display('1')"> </td>
+            <td> <input type="button" value="2" onclick="display('2')"> </td>
+            <td> <input type="button" value="3" onclick="display('3')"> </td>
+            <td> <input type="button" value="*" onclick="display('*')"> </td>
+        </tr>
 
-            <div class="showcase-form card">
-                <!-- <h2>Calculator</h2> -->
-                <div class="calculator">
-                    <form name="calculator">
-                        <table>
-                            <tr>
-                                <td colspan="4">
-                                    <h3 id="boom"></h3>
-                                    <input type="text" name="display" id="display">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><input type="button" name="one" value="1" id="one" class="number"
-                                        onclick="display('1')">
-                                </td>
-                                <td><input type="button" name="two" value="2" id="two" class="number">
-                                </td>
-                                <td><input type="button" name="three" value="3" id="three" class="number"></td>
-                                <td><input id="addition" type="button" class="operator" name="plus" value="+"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="button" name="four" value="4" id="four" class="number"></td>
-                                <td><input type="button" name="five" value="5" id="five" class="number"></td>
-                                <td><input type="button" name="six" value="6" id="six" class="number">
-                                </td>
-                                <td><input id="minus" type="button" class="operator" name="minus" value="-"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="button" name="seven" value="7" id="seven" class="number">
-                                </td>
-                                <td><input type="button" name="eight" value="8" id="eight" class="number">
-                                </td>
-                                <td><input type="button" name="nine" value="9" id="nine" class="number">
-                                </td>
-                                <td><input id="multiply" type="button" class="operator" name="times" value="x"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="button" id="clear" name="clear" value="c">
-                                </td>
-                                <td><input type="button" name="zero" value="0" id="zero" class="number">
-                                </td>
-                                <td><input id="calculate" type="button" name="doit" value="=" class="equal-sign">
-                                </td>
-                                <td><input id="divide" type="button" class="operator" name="div" value="/">
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
+        <tr>
+            <td> <input type="button" value="." onclick="display('.')"> </td>
+            <td> <input type="button" value="0" onclick="display('0')"> </td>
+            <td> <input type="button" value="=" onclick="calculate()"> </td>
+            <td> <input type="button" value="/" onclick="display('/')"> </td>
+        </tr>
+    </table>
 
-                </div>
-            </div>
-    </section>
-
-    <!-- Pseudo Code -->
-    <section class="stats">
-        <div class="container">
-        </div>
-    </section>
-    <!-- footer -->
-    <footer class="footer bg-primary py-2">
-        <div class="container grid grid-3">
-            <div>
-                <h1>#100Devs</h1>
-                <p>Copyright &copy; 2020</p>
-            </div>
-            <div class="social">
-                <a href="https://github.com/lgbrock"><i class="fab fa-github fa-2x"></i></a>
-                <a href="https://twitter.com/lifeisagarden23"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="https://www.discord.com/logangbrock#6187"><i class="fab fa-discord fa-2x"></i></a>
-                <a href="https://www.twitch.tv/logangbrock"><i class="fab fa-twitch fa-2x"></i></a>
-            </div>
-        </div>
-    </footer>
-    <script type="text/javascript" src="js/calc.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
-
-
-<!-- <body>
-
-		<main>
-			<section id="calc-body">
-
-				<section id="display">
-					<h2 id="beep"></h2>
-				</section>
-
-				<section class="bottom">
-					<section class="number-pad">
-						<div>
-							<div>
-								<span class="number" id="seven">7</span>
-							</div>
-							<div>
-								<span class="number" id="eight">8</span>
-							</div>
-							<div>
-								<span class="number" id="nine">9</span>
-							</div>
-
-						</div>
-						<div>
-							<div>
-								<span class="number" id="four">4</span>							
-							</div>
-							<div>
-								<span class="number" id="five">5</span>							
-							</div>
-							<div>
-								<span class="number" id="six">6</span>							
-							</div>
-						
-						</div>
-						<div>
-							<div>
-								<span class="number" id="three">3</span>							
-							</div>
-							<div>
-								<span class="number" id="two">2</span>
-							</div>
-							<div>
-								<span class="number" id="one">1</span>							
-							</div>						
-						</div>
-						<div>
-							<div>
-								<span class="number" id="zero">0</span>
-							</div>
-						
-						</div>
-
-					</section>
-
-					<section class="operator-pad">
-						<div>
-							<span class="operator">/</span>
-						</div>
-						<div>
-							<span class="operator">*</span>
-						</div>
-						<div>
-							<span class="operator">-</span>
-						</div>
-						<div>
-							<span class="operator">+</span>
-						</div>
-						<div class="equal-sign">
-							<span>=</span>
-						</div>
-
-                    </section>
-                    
-				</section>
-			
-            </section>
-            
-		</main>
-
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
-</html>
- -->
